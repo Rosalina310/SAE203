@@ -91,7 +91,7 @@ $types = $connexion->query("SELECT * FROM type")->fetchAll();
         <div class="catalogue-grid">
             <?php foreach ($medias as $media): ?>
                 <div class="catalogue-card <?= $media['est_emprunte'] > 0 ? 'indisponible' : 'disponible' ?>">
-                    <img src="/SAE203/assets/img/<?= str_replace(' ', '-', strtolower($media['Titre'])) ?>.jpg" alt="<?= htmlspecialchars($media['Titre']) ?>">
+                    <img src="/SAE203/assets/img/<?= slugify($media['Titre']) ?>.jpg" alt="<?= htmlspecialchars($media['Titre']) ?>">
                     <div class="catalogue-info">
                         <h3><?= $media['Titre'] ?></h3>
                         <p><?= $media['Auteur'] ?></p>

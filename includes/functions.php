@@ -534,6 +534,26 @@ function getMediasDisponibles() {
     }
 }
 
+function slugify($text) {
+    // Convertir les accents
+    $text = iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $text);
+
+    // Remplacer les apostrophes et points par rien (ou tu peux garder les points si tu veux)
+    $text = str_replace(['\'', '.', ':', ','], '', $text);
+
+    // Remplacer tout ce qui n'est pas lettre ou chiffre par un tiret
+    $text = preg_replace('/[^a-zA-Z0-9]+/', '-', $text);
+
+    // Trim les tirets en trop
+    $text = trim($text, '-');
+
+    // Met en minuscules
+    $text = strtolower($text);
+
+    return $text;
+}
+
+
 /**
  * Récupère les adhérents actifs pour un nouvel emprunt
  */
