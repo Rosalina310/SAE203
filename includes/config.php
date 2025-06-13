@@ -6,7 +6,7 @@
 
 // Configuration de la base de données
 $host = 'localhost';
-$dbname = 'chorfik';  // Nom de ta base de données
+$dbname = 'gontardl';  // Nom de ta base de données
 $user = 'root';
 $pass = '';
 $charset = 'utf8mb4';

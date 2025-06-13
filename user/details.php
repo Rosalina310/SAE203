@@ -10,7 +10,7 @@ if (!isset($_GET['id'])) {
 $media_id = (int)$_GET['id'];
 
 // Récupérer les détails du média
-$media = $db->prepare("
+$media = $connexion->prepare("
     SELECT m.*, t.Nom as Type,
     (SELECT COUNT(*) FROM emprunt e WHERE e.media_id = m.id AND e.Statut_Emprunt IN ('emprunté', 'en retard')) as est_emprunte
     FROM media m
@@ -26,7 +26,7 @@ if (!$media) {
 }
 
 // Médias similaires
-$similaires = $db->prepare("
+$similaires = $connexion->prepare("
     SELECT * FROM media 
     WHERE type_id = ? AND id != ? 
     LIMIT 4

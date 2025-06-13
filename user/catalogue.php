@@ -38,10 +38,10 @@ $query = "
     $requeteFiltres
     LIMIT $debut, $parPage
 ";
-$medias = $db->query($query)->fetchAll();
+$medias = $connexion->query($query)->fetchAll();
 
 // Total des médias
-$total = $db->query("
+$total = $connexion->query("
     SELECT COUNT(*) 
     FROM media m
     JOIN type t ON m.type_id = t.id
@@ -51,7 +51,7 @@ $total = $db->query("
 $totalPages = ceil($total / $parPage);
 
 // Types de médias pour filtres
-$types = $db->query("SELECT * FROM type")->fetchAll();
+$types = $connexion->query("SELECT * FROM type")->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="fr">

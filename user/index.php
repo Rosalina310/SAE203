@@ -2,7 +2,7 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . '/SAE203/includes/config.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/SAE203/includes/functions.php';
 
-$nouveautes = $db->query("
+$nouveautes = $connexion->query("
     SELECT m.*, t.Nom as Type 
     FROM media m
     JOIN type t ON m.type_id = t.id
@@ -10,7 +10,7 @@ $nouveautes = $db->query("
     LIMIT 6
 ")->fetchAll();
 
-$types = $db->query("SELECT * FROM type")->fetchAll();
+$types = $connexion->query("SELECT * FROM type")->fetchAll();
 
 include $_SERVER['DOCUMENT_ROOT'] . '/SAE203/user/header-user.php';
 ?>
