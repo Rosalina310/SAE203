@@ -1,0 +1,330 @@
+:root {
+    --text-color: #333;
+    --background-color: #f4f6f7;
+    --white: #ffffff;
+}
+
+body{
+    background-color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+
+}
+
+.hero-content{
+    background: rgb(240, 239, 239);
+    color: black;
+    text-align: center;
+    padding: 100px 50px;
+    font-size: 20px;
+    
+}
+
+.hero-content h1{
+    font-size: 2em;
+
+}
+
+.hero-content p{
+    margin-bottom: 30px;
+}
+
+ .nouveautes-flex {
+    display: flex;
+    padding: 30px 40px;
+    gap: 20px;
+
+}
+
+.types-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 40px;
+    gap:30px;
+}
+
+.type-card{
+    display: flex;
+    img{
+        
+        width: 200px;
+    }
+}
+
+.nouveautes-section{
+    padding: 30px 40px;
+}
+
+.media-card {
+    background: rgb(240, 239, 239);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+
+    text-align: center;
+
+    img{
+        border-radius: 10px;
+
+
+    }
+}
+
+.media-info{
+    p{
+        
+        font-size: 17px;
+    }
+    img{
+        height: 200px;
+
+
+    }
+}
+
+.media-card:hover {
+    transform: scale(1.05);
+}
+
+.disponibilite {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.disponibilite.disponible {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.disponibilite.indisponible {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: #3498db;
+}
+
+.types-section{
+    padding: 40px 40px;
+    font-size: 18px;
+}
+
+h2{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.media-image img {
+    width: 500px; /* ou une valeur fixe, ex : 200px */
+    height: auto;
+    object-fit: contain; /* ou "contain" selon l'effet souhaité */
+}
+
+.media-details{
+    display: flex;
+    align-items: center;
+    padding: 50px 200px;
+}
+
+.media-info{
+    padding: 30px 40px;
+}
+
+.media-info h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.similaires{
+    padding: 30px 40px;
+    
+}
+.similaires-flex{
+    display: flex;
+    justify-content: center;
+    padding: 30px 40px;
+    gap: 30px;
+    
+}
+
+
+.similaire-card{
+    background: rgb(240, 239, 239);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    width: 500px;
+    text-align: center;
+
+    img{
+        width: 100%;
+        border-radius: 10px;
+
+
+    }
+
+}
+
+.similaire-card:hover {
+    transform: scale(1.05);
+}
+
+.catalogue-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Filters section */
+.catalogue-filters {
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.catalogue-filters form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+
+.catalogue-filters select,
+.catalogue-filters button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.catalogue-filters button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+
+.catalogue-filters button:hover {
+    background-color: #0056b3;
+}
+
+/* Grid of media cards */
+.catalogue-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* Each media card */
+.catalogue-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.catalogue-card:hover {
+    transform: scale(1.02);
+}
+
+.catalogue-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    background-color: #eee;
+}
+
+.catalogue-info {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.catalogue-info h3 {
+    font-size: 18px;
+    color: #007bff;
+}
+
+.catalogue-info p {
+    font-size: 14px;
+    color: #555;
+}
+
+.catalogue-info .disponibilite {
+    margin-top: auto;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 14px;
+}
+
+
+
+
+.pagination {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.pagination a {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 8px 12px;
+    background-color: #e9ecef;
+    color: #333;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.pagination a.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.pagination a:hover {
+    background-color: #ced4da;
+}
