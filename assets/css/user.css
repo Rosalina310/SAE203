@@ -209,7 +209,6 @@ h2{
     padding: 0 20px;
 }
 
-/* Filters section */
 .catalogue-filters {
     margin-bottom: 30px;
     background: #fff;
@@ -245,14 +244,12 @@ h2{
     background-color: #0056b3;
 }
 
-/* Grid of media cards */
 .catalogue-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
 }
 
-/* Each media card */
 .catalogue-card {
     background: #fff;
     border-radius: 10px;
@@ -300,9 +297,6 @@ h2{
     display: inline-block;
     font-size: 14px;
 }
-
-
-
 
 .pagination {
     margin: 30px 0;
