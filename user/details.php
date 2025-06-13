@@ -47,7 +47,7 @@ $similaires = $similaires->fetchAll();
     <main class="details-container">
         <div class="media-details">
             <div class="media-image">
-                <img src="/SAE203/assets/img/<?= str_replace(' ', '-', strtolower($media['Titre'])) ?>.jpg" alt="<?= htmlspecialchars($media['Titre']) ?>">
+                    <img src="/SAE203/assets/img/<?= slugify($media['Titre']) ?>.jpg" alt="<?= htmlspecialchars($media['Titre']) ?>">
             </div>
             <div class="media-info">
                 <h2><?= $media['Titre'] ?></h2>
@@ -66,7 +66,7 @@ $similaires = $similaires->fetchAll();
             <div class="similaires-flex">
                 <?php foreach ($similaires as $similar): ?>
                     <div class="similaire-card">
-                        <img src="/SAE203/assets/img/<?= str_replace(' ', '-', strtolower($similar['Titre'])) ?>.jpg" alt="<?= htmlspecialchars($similar['Titre']) ?>">
+                    <img src="/SAE203/assets/img/<?= slugify($similar['Titre']) ?>.jpg" alt="<?= htmlspecialchars($similar['Titre']) ?>">
                         <div class="media-similaire">
                             <h3><?= $similar['Auteur'] ?> - <?= $similar['Titre'] ?></h3>
                             <a href="details.php?id=<?= $similar['id'] ?>" class="btn btn-secondary">Voir</a>

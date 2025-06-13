@@ -49,7 +49,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/SAE203/user/header-user.php';
             <div class="media-card">
                 <div class="media-info">
                     <a href="/SAE203/user/details.php?id=<?= urlencode($media['id']) ?>" class="btn btn-secondary">
-                    <img src="/SAE203/assets/img/<?= str_replace(' ', '-', strtolower($media['Titre'])) ?>.jpg" alt="<?= htmlspecialchars($media['Titre']) ?>">
+                    <img src="/SAE203/assets/img/<?= slugify($media['Titre']) ?>.jpg" alt="<?= htmlspecialchars($media['Titre']) ?>">
                     <p><?= htmlspecialchars($media['Auteur']) ?> - <?= htmlspecialchars($media['Titre']) ?></p></a>
                 </div>
             </div>
