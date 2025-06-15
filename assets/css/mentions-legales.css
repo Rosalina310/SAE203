@@ -15,15 +15,16 @@ body {
     border-radius: 10px;
 }
 
- h2 {
+h2 {
     color: #000000;
     margin-bottom: 20px;
     padding: 10px 30px;
 }
 
-h3{
+h3 {
     font-size: 22px;
 }
+
 p {
     margin-bottom: 15px;
     line-height: 1.6;
@@ -33,11 +34,34 @@ ul {
     margin-left: 20px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-a:hover{
-    text-decoration: underline ;
+a:hover {
+    text-decoration: underline;
 }
 
+@media (max-width: 480px) {
+    .container {
+        max-width: 95%;
+        margin: 20px auto;
+        padding: 15px;
+        box-shadow: none; 
+    }
+
+    h2 {
+        font-size: 20px;
+        padding: 8px 10px;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p, ul {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+}

@@ -6,5 +6,6 @@
             <a href="politique.php"> Politique de confidentialité</a>
         </div>
     </footer>
+    
 </body>
 </html>

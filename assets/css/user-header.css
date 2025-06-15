@@ -36,98 +36,21 @@ h1{
     font-weight: bold;
 }
 
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 5px;
-}
 
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     header {
-        padding: 15px 20px;
-        flex-wrap: wrap;
-        position: relative;
+        flex-direction: column;
+        align-items: flex-start;
     }
-    
-    header .logo h1 {
-        font-size: 1.5em;
-    }
-    
-    .menu-toggle {
-        display: block;
-        order: 3;
-    }
-    
-    header nav {
-        display: none;
-        width: 100%;
-        order: 4;
-        margin-top: 15px;
-    }
-    
-    header nav.active {
-        display: block;
-    }
-    
+
     header nav ul {
         flex-direction: column;
         gap: 15px;
         font-size: 18px;
-        padding: 15px 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.3);
-    }
-    
-    header nav ul li {
-        width: 100%;
-        text-align: center;
-    }
-    
-    header nav ul li a {
-        display: block;
-        padding: 12px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
-    
-    header nav ul li a:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-        text-decoration: none;
     }
 
-    
     header nav ul li a {
-        display: block;
-        padding: 10px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
-    
-    header nav ul li a:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-        text-decoration: none;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    header {
-        padding: 10px 15px;
-    }
-    
-    header .logo h1 {
-        font-size: 1.4em;
-    }
-    
-    header nav ul {
         font-size: 16px;
-        gap: 10px;
     }
     
-    .menu-toggle {
-        font-size: 20px;
-    }
 }

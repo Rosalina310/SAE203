@@ -2,6 +2,7 @@
     <html lang="fr">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Médiathèque Livresse</title>
         <link rel="stylesheet" href="../assets/css/reset.css">
         <link rel="stylesheet" href="../assets/css/user.css">
@@ -14,6 +15,8 @@
             <div class="logo">
                 <h1>Médiathèque Livresse</h1>
             </div>
+
+
             <nav>
                 <ul>
                     <li><a href="index.php">Accueil</a></li>

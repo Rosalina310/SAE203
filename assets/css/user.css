@@ -355,95 +355,96 @@ h2{
 }
 
 @media screen and (max-width: 480px) {
-    .hero-content {
-        padding: 40px 20px;
-        font-size: 16px;
-    }
     
-    .hero-content h1 {
-        font-size: 1.6em;
+    * {
+        box-sizing: border-box;
     }
-    
-    .nouveautes-flex {
-        gap: 15px;
-        padding: 20px 10px;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
     }
-    
-    .media-card {
-        width: 100%;
-        max-width: 300px;
+
+    h2 {
+        font-size: 22px;
     }
-    
-    .types-flex {
-        padding: 15px 20px;
-        gap: 15px;
-        flex-direction: column;
-    }
-    
-    .type-card img {
-        width: 150px;
-    }
-    
-    .media-details {
-        padding: 20px 15px;
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .media-image img {
-        width: 100%;
-        max-width: 350px;
-    }
-    
-    .media-info {
-        padding: 15px;
-    }
-    
-    .similaires-flex {
-        padding: 15px 10px;
-        gap: 15px;
-    }
-    
-    .similaire-card {
-        width: 100%;
-        max-width: 350px;
-    }
-    
+
     .nouveautes-section,
     .types-section,
     .similaires {
         padding: 20px 15px;
     }
-    
-    h2 {
-        font-size: 22px;
-    }
-    
+
     .types-section {
         font-size: 16px;
     }
-    
-    .catalogue-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+    .nouveautes-flex,
+    .similaires-flex {
+        display: flex;
+        flex-wrap: wrap;
         gap: 15px;
+        padding: 20px 10px;
     }
-    
+
+    .media-card,
+    .similaire-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .types-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+        align-items: center;
+    }
+
+    .type-card img {
+        width: 150px;
+    }
+
+    .media-details {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 15px;
+    }
+
+    .media-image img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .media-info {
+        padding: 15px;
+    }
+
     .catalogue-container {
         padding: 0 15px;
     }
-    
+
+    .catalogue-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+    }
+
     .catalogue-filters form {
+        display: flex;
         flex-direction: column;
         align-items: stretch;
         gap: 10px;
     }
-    
+
     .catalogue-filters select,
     .catalogue-filters button {
         width: 100%;
         min-width: auto;
     }
-    
+
     .pagination a {
         padding: 8px 12px;
         margin: 0 3px;

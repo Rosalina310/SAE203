@@ -8,6 +8,8 @@ include('header-user.php');
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Mentions Légales - Médiathèque  Livresse</title>
     <link rel="stylesheet" href="../assets/css/mentions-legales.css">
 </head>
@@ -45,8 +47,6 @@ include('header-user.php');
         La Médiathèque ne peut être tenue responsable des erreurs ou des interruptions de service. Elle s'efforce de garantir la fiabilité des informations diffusées.
     </p>
 </div>
-
-
 
 <?php 
 // Inclu$on du footer avec chemin absolu
