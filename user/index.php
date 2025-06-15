@@ -1,6 +1,7 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/SAE203/includes/config.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/SAE203/includes/functions.php';
+require_once __DIR__ . '/../includes/config.php';
+require_once __DIR__ . '/../includes/functions.php';
+
 
 $nouveautes = $connexion->query("
     SELECT m.*, t.Nom as Type 
@@ -12,7 +13,7 @@ $nouveautes = $connexion->query("
 
 $types = $connexion->query("SELECT * FROM type")->fetchAll();
 
-include $_SERVER['DOCUMENT_ROOT'] . '/SAE203/user/header-user.php';
+include('header-user.php');
 ?>
 
 
@@ -21,7 +22,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/SAE203/user/header-user.php';
     <div class="hero-content">
         <h1>Bienvenue à la Médiathèque Livresse</h1>
         <p>Découvrez notre collection unique au cœur de Rochefourchat</p>
-        <a href="/SAE203/user/catalogue.php" class="btn btn-primary">Explorer le Catalogue</a>
+        <a href="catalogue.php" class="btn btn-primary">Explorer le Catalogue</a>
     </div>
 </section>
 
@@ -31,11 +32,11 @@ include $_SERVER['DOCUMENT_ROOT'] . '/SAE203/user/header-user.php';
        <?php foreach ($types as $type): ?>
             <?php
                 $imageName = str_replace(' ', '-', strtolower($type['Nom'])) . '.png';
-                $url = "/SAE203/user/catalogue.php?type=" . urlencode($type['id']);
+                $url = "catalogue.php?type=" . urlencode($type['id']);
             ?>
             <div class="type-card">
                 <a href="<?= $url ?>">
-                    <img src="/SAE203/assets/img/<?= $imageName ?>" alt="<?= htmlspecialchars($type['Nom']) ?>">
+                    <img src="../assets/img/<?= $imageName ?>" alt="<?= htmlspecialchars($type['Nom']) ?>">
                 </a>
             </div>
         <?php endforeach; ?>
@@ -47,18 +48,20 @@ include $_SERVER['DOCUMENT_ROOT'] . '/SAE203/user/header-user.php';
     <div class="nouveautes-flex">
         <?php foreach ($nouveautes as $media): ?>
             <div class="media-card">
-                <div class="media-info">
-                    <a href="/SAE203/user/details.php?id=<?= urlencode($media['id']) ?>" class="btn btn-secondary">
-                    <img src="/SAE203/assets/img/<?= slugify($media['Titre']) ?>.jpg" alt="<?= htmlspecialchars($media['Titre']) ?>">
-                    <p><?= htmlspecialchars($media['Auteur']) ?> - <?= htmlspecialchars($media['Titre']) ?></p></a>
-                </div>
+                <a href="details.php?id=<?= urlencode($media['id']) ?>" class="media-link">
+                    <img src="../assets/img/<?= slugify($media['Titre']) ?>.jpg" alt="<?= htmlspecialchars($media['Titre']) ?>">
+                    <div class="media-info">
+                        <p><?= htmlspecialchars($media['Auteur']) ?> - <strong><?= htmlspecialchars($media['Titre']) ?></strong></p>
+                    </div>
+                </a>
             </div>
         <?php endforeach; ?>
     </div>
+</div>
+
 </section>
 
 
 <?php 
-// Inclu$on du footer avec chemin absolu
-include $_SERVER['DOCUMENT_ROOT'] . '/SAE203/user/footer-user.php'; 
+include('footer-user.php');
 ?>

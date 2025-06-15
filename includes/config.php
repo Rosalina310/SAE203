@@ -5,10 +5,10 @@
  */
 
 // Configuration de la base de données
-$host = 'localhost';
-$dbname = 'gontardl';  // Nom de ta base de données
-$user = 'root';
-$pass = '';
+$host = '192.168.135.113';
+$dbname = 'gontaluc';  // Nom de ta base de données
+$user = 'gontaluc';
+$pass = 'As+CNNa9PgC8ck=';
 $charset = 'utf8mb4';
 
 // Options de connexion PDO
